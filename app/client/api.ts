@@ -279,6 +279,14 @@ export function getHeaders() {
     );
   }
 
+  // 添加CORS头
+  headers["Origin"] = "http://localhost:3000";
+  headers["Content-Type"] = "application/json";
+  headers["Accept"] = "application/json";
+  headers["Access-Control-Allow-Origin"] = "http://localhost:3000"; // 允许所有来源
+  headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"; // 允许的HTTP方法
+  headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"; // 允许的请求头
+
   return headers;
 }
 
